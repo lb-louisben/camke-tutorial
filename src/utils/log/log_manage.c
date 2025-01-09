@@ -1,4 +1,5 @@
 #include "./log_manage.h"
+#include "add.h"
 #include <stdio.h>
 
 void create_log(char *message, char *time, enum log_level level)
@@ -14,6 +15,9 @@ void create_log(char *message, char *time, enum log_level level)
 
 void log_print()
 {
+    int a = 1;
+    int b = 2;
+    printf("a + b = %d\n", add(a, b));
     log_entry logs[] = {
         {"This is an info message", "2021-07-01 12:00:00", INFO},
         {"This is a warning message", "2021-07-01 12:01:00", WARNING},
