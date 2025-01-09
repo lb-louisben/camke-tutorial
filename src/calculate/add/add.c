@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include "head.h"
+#include "add.h"
 
 int add(int a, int b)
 {
