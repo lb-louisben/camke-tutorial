@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.0)
 
 # 定义项目
-project(CALC LANGUAGES C VERSION 1.0.4)
+project(CALC LANGUAGES C CXX VERSION 1.0.4)
 
 # 设置 C 标准
 set(CMAKE_C_STANDARD 17)
@@ -10,6 +10,9 @@ set(CMAKE_C_STANDARD_REQUIRED True)
 
 # 添加 src 文件夹
 add_subdirectory(src)
+
+# 添加测试子目录
+add_subdirectory(tests)
 
 # 指定最终生成的可执行文件
 add_executable(main src/main.c)
