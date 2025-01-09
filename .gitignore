@@ -1,0 +1,25 @@
+# 忽略构建目录
+build/
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+
+# 忽略CMake生成的Makefile
+/CMakeFiles/
+/build/
+/CMakeCache.txt
+cmake_install.cmake
+
+# 保留根目录的Makefile
+!Makefile
+
+# 忽略操作系统生成的文件
+.DS_Store
+Thumbs.db
+
+# 忽略日志文件
+*.log
+*.out
+*.err
