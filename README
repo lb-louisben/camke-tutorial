@@ -281,7 +281,7 @@ cmake ..
 
 ## CMake 常用命令黄页
 
-### 1. 基础命令
+#### **1. 基础命令**
 - **`project()`**：定义项目名称和支持的语言。
   ```cmake
   project(MyProject LANGUAGES CXX)
@@ -302,7 +302,7 @@ cmake ..
   add_library(my_library STATIC library.cpp)
   ```
 
-### 2. 路径管理
+#### **2. 路径管理**
 - **`target_include_directories()`**：为目标指定头文件路径。
   ```cmake
   target_include_directories(my_program PRIVATE include/)
@@ -318,7 +318,7 @@ cmake ..
   include_directories(include/)
   ```
 
-### 3. 变量设置
+#### **3. 变量设置**
 - **`set()`**：定义变量。
   ```cmake
   set(CMAKE_CXX_STANDARD 17)
@@ -329,7 +329,7 @@ cmake ..
   message("Build started")
   ```
 
-### 4. 测试相关
+#### **4. 测试相关**
 - **`enable_testing()`**：启用测试功能。
   ```cmake
   enable_testing()
@@ -345,7 +345,7 @@ cmake ..
   include(GoogleTest)
   ```
 
-### 5. 高级功能
+#### **5. 高级功能**
 - **`add_subdirectory()`**：递归添加子目录。
   ```cmake
   add_subdirectory(src)
@@ -356,3 +356,45 @@ cmake ..
   aux_source_directory(src DIR_SRCS)
   ```
 
+- **`file(GLOB)`**：收集指定目录中的文件。
+  ```cmake
+  file(GLOB SRC_FILES "src/*.cpp")
+  ```
+
+- **`find_package()`**：查找外部依赖包。
+  ```cmake
+  find_package(Boost REQUIRED)
+  ```
+
+- **`configure_file()`**：配置并复制文件到构建目录。
+  ```cmake
+  configure_file(config.h.in config.h)
+  ```
+
+#### **6. 调试相关**
+- **`message(STATUS ...)`**：输出状态信息。
+  ```cmake
+  message(STATUS "This is a status message.")
+  ```
+
+- **`message(WARNING ...)`**：输出警告信息。
+  ```cmake
+  message(WARNING "This is a warning message.")
+  ```
+
+- **`message(FATAL_ERROR ...)`**：输出错误并中止配置。
+  ```cmake
+  message(FATAL_ERROR "Configuration failed.")
+  ```
+
+#### **7. 版本控制**
+- **`set_property()` 和 `get_property()`**：设置和获取目标属性。
+  ```cmake
+  set_property(TARGET my_program PROPERTY CXX_STANDARD 17)
+  get_property(VAR TARGET my_program PROPERTY CXX_STANDARD)
+  ```
+
+- **`option()`**：定义可选项。
+  ```cmake
+  option(USE_FEATURE "Enable this feature" ON)
+  ```
