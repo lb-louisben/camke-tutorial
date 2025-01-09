@@ -1,6 +1,6 @@
 add_library(calculate
-    add/add.c
-    sub/sub.c
+    add/add.cpp
+    sub/sub.cpp
 )
 
 target_include_directories(calculate PUBLIC

@@ -1,5 +1,5 @@
 #include "array_print.h"
-#include <stdio.h>
+#include <cstdio>
 
 void print_array(int *arr, int size)
 {

@@ -1,8 +1,8 @@
-#include "./log_manage.h"
+#include "log_manage.h"
 #include "add.h"
-#include <stdio.h>
+#include <cstdio>
 
-void create_log(char *message, char *time, enum log_level level)
+void create_log(const char *message, const char *time, enum log_level level)
 {
     log_entry new_log;
 
