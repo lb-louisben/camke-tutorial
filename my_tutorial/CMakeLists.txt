@@ -1,5 +1,5 @@
 # 最低CMake版本要求
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.20)
 
 project(CALC LANGUAGES CXX VERSION 1.3.0)
 
@@ -20,12 +20,4 @@ add_subdirectory(tests)
 add_executable(main src/main.cpp)
 
 # 链接子模块库到主程序
-target_link_libraries(main PRIVATE calculate utils)
-
-# 添加头文件搜索路径
-target_include_directories(main PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/calculate/add
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/calculate/sub
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/utils/print
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/utils/log
-)
+target_link_libraries(main PRIVATE utils)

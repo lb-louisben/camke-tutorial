@@ -6,7 +6,6 @@ add_library(utils
 target_include_directories(utils PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/print
     ${CMAKE_CURRENT_SOURCE_DIR}/log
-    ${CMAKE_SOURCE_DIR}/src/calculate/add
 )
 
 # 链接 calculate 模块

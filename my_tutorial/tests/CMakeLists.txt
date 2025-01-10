@@ -2,15 +2,12 @@
 include_directories(${CMAKE_SOURCE_DIR}/src/lib/googletest/gtest/include)
 link_directories(${CMAKE_SOURCE_DIR}/src/lib/googletest/gtest/lib)
 
-# 启用测试支持
-enable_testing()
-
 # 添加测试目标
 add_executable(test_add test_add.cpp)
-target_link_libraries(test_add PRIVATE gtest gtest_main calculate utils)
+target_link_libraries(test_add PRIVATE gtest gtest_main calculate)
 
 add_executable(test_sub test_sub.cpp)
-target_link_libraries(test_sub PRIVATE gtest gtest_main calculate utils)
+target_link_libraries(test_sub PRIVATE gtest gtest_main calculate)
 
 add_executable(test_log_manage test_log_manage.cpp)
 target_link_libraries(test_log_manage PRIVATE gtest gtest_main utils)
